@@ -1,0 +1,59 @@
+@use '../base/variables.scss' as v;
+@use '../base/globales.scss' as g;
+@use '../base/mixins.scss' as m;
+
+
+
+/** Clases **/
+
+.listado-blog{
+    margin-top: 4rem;
+
+    .contenido {
+        padding: 0 2rem;
+        text-align: center;
+    }
+    
+}
+
+@include m.tablet{
+    .listado-blog {
+        @include m.grid(3 ,1fr);
+        gap: 1rem;
+
+        .contenido {
+            text-align: left;
+        }
+
+        .blog-card-card h3 {
+            margin: 0;
+        }
+    }
+    
+}
+
+//paginacion 
+ 
+.pagination .screen-reader-text {
+    visibility: hidden;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+
+    a {
+        font-size: 2rem;
+        color: v.$primaryColor;
+        font-weight: 700;
+        padding: .5rem;
+    }
+
+    .current {
+        font-size: 3rem;
+    }
+}
+
+
+

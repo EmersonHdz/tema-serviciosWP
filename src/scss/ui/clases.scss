@@ -1,0 +1,78 @@
+@use '../base/variables.scss' as v;
+@use '../base/globales.scss' as g;
+@use '../base/mixins.scss' as m;
+
+//Creacion e los estilos para el area de clases, pagina clases
+.informacion-clase{
+    font-weight: 700;
+    font-size: 2.2rem;
+    text-align: center;
+}
+.listado-grid{
+    margin-top: 4rem;
+    display: grid;
+    gap: 1rem;
+    object-fit: cover;
+}
+
+@include m.tablet {
+    .listado-grid{
+        grid-template-columns: repeat(4,1fr);
+        
+    }
+    
+   }
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    
+    img {
+        display: block;
+        position: relative;
+        z-index: -1;
+        height: 30rem;
+        width: 40rem;
+        object-fit: cover;
+        border-radius: 1.5rem;
+    }
+
+    .contenido{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 2rem;
+        z-index: 2;
+    }
+
+    h3{
+        color: v.$blanco;
+        margin: 0;
+    }
+
+    p{
+        color: v.$blanco;
+        margin: 1rem;
+    }
+}
+
+
+.contenido-principal {
+
+    .especialidad{
+        display: flex;
+       flex-wrap: wrap-reverse;
+       gap: 8px;
+              
+       .servicio{
+        background-color: v.$azul;
+        color: #ffffff;
+        padding: 1rem;
+        border-radius: 1rem;
+        margin-top: 3rem;
+       }
+    }
+}
+
+
+

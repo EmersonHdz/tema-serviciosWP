@@ -1,0 +1,54 @@
+@use '../base/variables.scss' as v;
+@use '../base/mixins.scss' as m;
+
+
+.post-categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+
+    li {
+        padding: 1rem;
+        margin-right: 1rem;
+        border-radius: .5rem;
+
+        a {
+            display: grid;
+            grid-auto-flow: row;
+            font-size: 2rem;
+            font-family: v.$fuenteHeadings;;
+            color: v.$grisOscuro;
+        }
+    }
+}
+@include m.tablet {
+    .post-categories {
+        position: absolute;
+        top: 2rem;
+        left: 1rem;
+        z-index: 10;
+
+        li {
+            background-color: v.$azul;
+
+            a {
+                color: v.$blanco;
+            }
+        }
+        li:hover{
+            background-color: v.$primaryColor;
+        }
+    }
+}
+.post-categories li:last-of-type{
+    margin-right: 0;
+}
+
+.meta-categoria {
+    ul {
+        position: relative;
+        justify-content: left;
+        margin: 0;
+    }
+}

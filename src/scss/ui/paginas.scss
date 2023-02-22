@@ -1,0 +1,48 @@
+@use '../base/variables.scss' as v;
+@use '../base/globales.scss' as g;
+@use '../base/mixins.scss' as m;
+
+/** estilos para nuevas paginas creadas **/
+
+@include m.tablet {
+ .con-sidebar{
+  @include m.grid(2, 6rem)  
+ }
+
+ .contenido-principal{
+    h1{
+        color: v.$primaryColor;
+    }
+
+    img{
+        border-radius: 1.5rem;
+        //centrar imagen
+        display: block;
+        margin: auto;
+    }
+
+    p{
+
+    }
+}
+
+}
+
+/** paginas sin sidebar No sidebar **/
+.no-sidebar {
+    display: flex;
+    justify-content: center;
+
+    .contenido-principal {
+        flex: 0 1 1000px;
+        margin: 0;
+    }
+
+    img{
+        border-radius: 2rem;
+    }
+
+    p {
+        margin: 1.5rem;
+    }
+}

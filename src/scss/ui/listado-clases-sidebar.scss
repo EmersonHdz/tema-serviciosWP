@@ -1,0 +1,64 @@
+@use '../base/variables.scss' as v;
+@use '../base/globales.scss' as g;
+@use '../base/mixins.scss' as m;
+
+
+// Creacion de estilos para el widget de clases
+
+.clases-sidebar{
+
+    li {
+    list-style: none;
+    box-shadow:  0 15px 25px -10px rgba(0, 0, 0, .70);;
+    padding: 2rem 0;
+   
+    }
+    .contenido-clase {
+
+        margin-bottom: 1rem;
+         
+        h3{
+            margin: 0 ;
+            font-size: 2.6rem;
+        }
+         a{
+            color: v.$primaryColor;
+         }
+
+         img{
+            margin-left: 5px;
+            border-radius: 1.5rem;
+           
+         }
+
+         p{
+        
+           font-size: 1.8rem;
+         }
+
+         .especialidad{
+            display: flex;
+           flex-wrap: wrap-reverse;
+           gap: 8px;
+                  
+           .etiqueta{
+            background-color: v.$primaryColor;
+            color: #ffffff;
+            padding: 1rem;
+            border-radius: 1rem;
+            margin-top: 2rem;
+           }
+        }
+    }
+}
+
+@include m.tablet {
+    .clases-sidebar{
+
+        li {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 1rem;
+        }
+    }
+}

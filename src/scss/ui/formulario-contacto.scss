@@ -1,0 +1,53 @@
+@use '../base/variables.scss' as v;
+@use '../base/globales.scss' as g;
+@use '../base/mixins.scss' as m;
+
+.wpcf7-form {
+
+    label {
+        font-weight: 700;
+    }
+
+    .wpcf7-form-control {
+        width: 100%;
+        border: 1px solid v.$grisClaro;
+        padding: 1rem;
+    }
+
+    .wpcf7-submit{
+        background-color: v.$primaryColor;
+        font-size: 2rem;
+        font-family: v.$fuenteTexto;
+        padding: 1.2rem;
+        color: v.$blanco;
+    }
+}
+
+.wpcf7-form .wpcf7-submit:hover{
+    cursor: pointer;
+}
+
+
+.wpcf7-form {
+
+    .wpcf7-not-valid-tip{
+        background-color: rgb(200, 6, 6);
+        color: v.$blanco;
+        padding: .5rem;
+        margin: .5rem 0;
+        display: block;
+    }
+
+    .ajax-loader {
+        display: block;
+        margin: 2rem auto 0 auto;
+    }
+
+    .wpcf7-spinner {
+        display: block;
+        margin: 2rem auto 0 auto;
+        background-color: v.$primaryColor;
+        opacity: 1;
+    }
+    
+}

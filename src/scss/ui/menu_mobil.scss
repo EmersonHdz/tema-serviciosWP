@@ -1,0 +1,38 @@
+@use '../base/variables.scss' as v;
+@use '../base/globales.scss' as g;
+@use '../base/mixins.scss' as m;
+
+/** Reescribir Estilos menú movil **/
+body.home .slicknav_menu {
+    background-color: transparent;
+}
+.slicknav_menu {
+   
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2.5rem!important;
+}
+@include m.tablet {
+    .slicknav_menu {
+        display: none;
+    }
+}
+.slicknav_btn {
+    background-color: v.$primaryColor;
+    margin: 3rem 0;
+    padding: 2rem!important;
+}
+.slicknav_nav a {
+    font-size: 2.7rem!important;
+    text-align: center;
+    font-family: v.$fuenteHeadings;;
+}
+.slicknav_nav a:hover {
+    background: transparent;
+    color: v.$primaryColor;
+}
+
+.slicknav_menu .slicknav_menutxt{
+    font-family: v.$fuenteHeadings;;
+}

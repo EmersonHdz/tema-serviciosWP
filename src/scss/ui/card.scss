@@ -1,0 +1,93 @@
+@use '../base/variables.scss' as v;
+@use '../base/globales.scss' as g;
+@use '../base/mixins.scss' as m;
+
+/** Cards **/
+
+
+@include m.tablet{
+    .blog-card {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        border: none;
+    }
+}
+
+.blog-card {
+    margin-bottom: 4rem;
+    border-bottom: 1px solid v.$grisClaro;
+    border-radius: 2rem;
+    overflow: hidden;
+
+    img {
+        display: block;
+        height: 35rem;
+        width: 45rem;
+    }
+
+    .contenido {
+        padding: 2rem;
+
+        h3 {
+            line-height: 1;
+            color: v.$primaryColor;
+            font-size: 3rem;
+        }
+
+        p {
+            font-weight: 700;
+            font-size: 2rem;
+            margin: 0;
+        }
+    }
+}
+
+@include m.tablet {
+    .blog-card .contenido {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        text-align: left;
+        z-index: 2;
+
+        h3 {
+            color: v.$blanco;
+        }
+
+        p {
+            color: v.$primaryColor;
+        }
+    }
+}
+
+
+.blog-card .contenido .meta{
+    color: v.$negro;
+    font-size: 1.4rem;
+    a {
+        color: v.$negro;
+    }
+     p{
+        color: v.$primaryColor;
+     }
+
+    span {
+        color: v.$primaryColor;
+    }
+}
+@include m.tablet{
+    .blog-card .contenido .meta {
+        a {
+            color: v.$blanco;
+        }
+    }
+}
+
+.meta-info {
+    .meta {
+        a {
+            color: v.$negro;
+        }
+    }
+}
